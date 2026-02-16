@@ -1,0 +1,51 @@
+:root {
+
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	--primary-color: black; /* background color */
+	--secondary-color: white; /* text color */
+	--background-color: lightyellow;
+	--secondary-bg-color: #252525;
+    --font-default: 'Roboto', sans-serif;
+    --font-title:'Inter', sans-serif;
+	--size-default: 0.9rem;
+	--size-h1: calc(var(--size-default)*1.7);
+	--size-h2: calc(var(--size-default)*1.5);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: var(--font-default);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    text-align: left;
+	font-size: var(--size-default);
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1{
+	font-size: var(--size-h1);
+
+}
+
+h2{
+	font-size: var(--size-h2);
+}
+
+@media (min-width: 768px) {
+  :root {
+	--size-default: 1rem;
+	}
+}

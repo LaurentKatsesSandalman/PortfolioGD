@@ -1,0 +1,43 @@
+.arrowimg{
+    height: calc(var(--size-default)*0.8);
+    font-size: calc(var(--size-default)*1.5) ;
+}
+
+.arrow{
+        text-decoration: none;
+    color:var(--secondary-color);
+     font-size: calc(var(--size-default)*1) ;
+     text-transform: uppercase;
+}
+
+.main{
+    width: 80vw;
+    margin:0 auto;
+}
+
+.desc{
+    margin: 0.5rem auto 1.5rem;
+}
+
+.projectsList{
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+
+.projectsList{
+    display: flex;
+    gap: 25px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+}
+
+@media (min-width: 1100px) {
+
+.desc{
+    text-align: center;
+}
+
+}

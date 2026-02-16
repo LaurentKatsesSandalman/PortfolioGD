@@ -1,0 +1,19 @@
+.sectionImage{
+    aspect-ratio:1/1;
+    width: min(20vw, 180px);
+    display: block;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+
+    border-radius: 50%;
+}
+
+.sectionName{
+    display: block;
+    text-align: center;
+}
+
+.sectionLink {
+  text-decoration: none;
+  color: inherit;
+}

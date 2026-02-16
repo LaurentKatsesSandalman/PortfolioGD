@@ -1,0 +1,58 @@
+.allblocks {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-bg-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+
+.pictoLink {
+    aspect-ratio: 1/1;
+    width: 1.5rem;
+}
+
+.rightblock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.mailTel{
+    display: flex;
+    flex-direction: column;
+}
+
+.picto{
+    margin: 3px auto;
+}
+
+.pRight{
+text-align: center;
+}
+
+.leftblock{
+    display:none
+}
+
+@media (min-width: 768px) {
+
+.leftblock{
+    display:block
+}
+
+.allblocks {
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.pLeft {
+    font-size: calc(var(--size-default)*0.9);
+}
+
+.pRight {
+    font-size: calc(var(--size-default)*0.9);
+}
+
+}

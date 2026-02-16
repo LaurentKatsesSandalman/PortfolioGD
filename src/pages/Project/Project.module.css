@@ -1,0 +1,62 @@
+.arrowimg {
+    height: calc(var(--size-default) * 0.8);
+    font-size: calc(var(--size-default) * 1.5);
+}
+
+.arrow {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: calc(var(--size-default) * 1);
+    text-transform: uppercase;
+}
+
+.main {
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+
+.projectImage {
+    margin: 0 auto;
+    display: block;
+    aspect-ratio: 1/1;
+    width: min(100%, 360px);
+    object-fit: contain;
+    background-color: var(--background-color);
+
+}
+
+.projectImage:hover{
+    border:10px solid var(--secondary-bg-color)
+
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: calc(var(--size-default) * 1.2);
+}
+
+.h3container {
+    margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+
+.twoBlocks{
+    display: flex;
+    gap: 10px
+}
+
+.imageBlock{
+    width:50%
+}
+
+.projectImage {
+    width:100%
+}
+
+.texteBlock{
+    width:50%
+}
+
+}
