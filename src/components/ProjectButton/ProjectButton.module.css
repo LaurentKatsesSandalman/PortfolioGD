@@ -8,6 +8,7 @@
 
 .projectName{
     color: var(--secondary-color);
+	text-align: center;
 }
 
 .projectImage{
@@ -22,6 +23,10 @@
 
 .projectLink{
     margin-bottom:0;
+}
+
+.projectName{
+    width: min(30vw, 200px);
 }
 
 }

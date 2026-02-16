@@ -13,6 +13,23 @@
     border-radius: 30%;
 }
 
-h1{
-    margin: 0 auto
+.h1container{
+margin: 0 auto;
+	
+}
+
+.h1{
+    
+	font-size: var(--size-h1);
+	font-family: var(--font-title);
+	text-align: center;
+	font-weight: 700;
+}
+
+.h2{
+    
+	/* font-size: var(--size-h2); */
+	font-family: var(--font-title);
+	text-align: center;
+	font-style: italic;
 }

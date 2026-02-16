@@ -12,8 +12,8 @@ function SectionButton({image, name, to, ariaLabel}:SectionButtonProps){
 
     return(
         <Link to={to} className={styles.sectionLink} state={{ from: "/" }} aria-label={ariaLabel}>
-        <img className={styles.sectionImage} src={image} alt=""/>
-        <p className={styles.sectionName}>{name}</p>
+        <h3 className={styles.sectionName}>{name}</h3>
+		<img className={styles.sectionImage} src={image} alt=""/>
         </Link>
     )
 }

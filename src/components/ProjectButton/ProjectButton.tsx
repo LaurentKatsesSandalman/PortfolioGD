@@ -14,8 +14,8 @@ function ProjectButton({img, name, to, alt}:ProjectButtonProps){
 
     return(
         <Link to={to} className={styles.projectLink} state={{ from: `/portfolio/${section}` }}>
-        <img className={styles.projectImage} src={img} alt={alt}/>
-        <p className={styles.projectName}>{name}</p>
+        <h3 className={styles.projectName}>{name}</h3>
+		<img className={styles.projectImage} src={img} alt={alt}/>
         </Link>
     )
 }

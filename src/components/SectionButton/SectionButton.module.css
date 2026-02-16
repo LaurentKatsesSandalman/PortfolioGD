@@ -4,16 +4,28 @@
     display: block;
     margin: 0 auto;
     background-color: var(--secondary-color);
-
+	object-fit: contain;
     border-radius: 50%;
 }
 
 .sectionName{
     display: block;
     text-align: center;
+	margin-bottom: 0.75rem;
 }
 
 .sectionLink {
   text-decoration: none;
   color: inherit;
+
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+.sectionLink {
+ 
+  width: min(20vw, 180px);
+  margin-top: 2rem;
+}
+
 }

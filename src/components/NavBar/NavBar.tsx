@@ -6,8 +6,10 @@ function NavBar(){
 
     return(
         <div className={styles.navbar}>
-       <Link to="/" aria-label="retour page d'accueil"> <img className={styles.logo} src={Sandals} alt="picto de sandales"/></Link>
-        <h1>Laurent Sandalman</h1>
+       <Link to="/" aria-label="Back to home page"> <img className={styles.logo} src={Sandals} alt="Sandales icon"/></Link>
+        <div className={styles.h1container}>
+		<p className={styles.h1}>Laurent "Sandalman"</p>
+		<p className={styles.h2}>Senior GD Mobile-FTP</p></div>
         </div>
     )
 }

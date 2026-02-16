@@ -22,9 +22,9 @@ function SectionPage(){
 
     return(
         <>
-        <Link  to={initialPage} className={styles.arrow}><img  className={styles.arrowimg} alt="Arrow back pictogram" src={arrowIcon} />Accueil</Link>
+        <Link  to={initialPage} className={styles.arrow}><img  className={styles.arrowimg} alt="Arrow back pictogram" src={arrowIcon} />Home</Link>
         <div className={styles.main}>
-        <h2>{currentSection.section}</h2>
+        <h2 className={styles.h2}>{currentSection.section}</h2>
         <p className={styles.desc}>{currentSection.desc}</p>
         <div className={styles.projectsList}>
         {currentSection.projects.map((project)=>(

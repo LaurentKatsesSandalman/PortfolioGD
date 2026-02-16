@@ -1,6 +1,7 @@
 .arrowimg{
     height: calc(var(--size-default)*0.8);
     font-size: calc(var(--size-default)*1.5) ;
+	margin:0 5px
 }
 
 .arrow{
@@ -12,7 +13,7 @@
 
 .main{
     width: 80vw;
-    margin:0 auto;
+    margin:1rem auto;
 }
 
 .desc{
@@ -21,15 +22,22 @@
 
 .projectsList{
     padding-bottom: 6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
 @media (min-width: 768px) {
 
 .projectsList{
-    display: flex;
-    gap: 25px;
+    flex-direction: row;
+    gap: 35px;
     flex-wrap:wrap;
     justify-content: center;
+}
+
+.h2{
+	text-align: center;
 }
 
 }

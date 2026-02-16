@@ -1,6 +1,7 @@
 .arrowimg {
     height: calc(var(--size-default) * 0.8);
     font-size: calc(var(--size-default) * 1.5);
+	margin:0 5px
 }
 
 .arrow {
@@ -11,24 +12,51 @@
 }
 
 .main {
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto;
     padding-bottom: 6rem;
+}
+
+.h2{
+	text-align: center;
+	margin-bottom: 1rem
 }
 
 .projectImage {
     margin: 0 auto;
     display: block;
-    aspect-ratio: 1/1;
-    width: min(100%, 360px);
-    object-fit: contain;
+    width: 100%;
     background-color: var(--background-color);
 
 }
 
-.projectImage:hover{
-    border:10px solid var(--secondary-bg-color)
+.projectVideo{
+	width: 100%
+}
 
+.link {
+  position: relative;
+}
+
+.anchor{
+	color:inherit
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.link:hover::after {
+  opacity: 1;
 }
 
 h3 {
@@ -44,19 +72,23 @@ h3 {
 
 .twoBlocks{
     display: flex;
-    gap: 10px
-}
-
-.imageBlock{
-    width:50%
+    gap: 10px;
+	margin: 0 auto;
+	justify-content: center;
 }
 
 .projectImage {
-    width:100%
+	display: block;
+    width:560px;
 }
 
 .texteBlock{
-    width:50%
+    width:560px
+}
+
+.projectVideo{
+	width:560px;
+    height:315px;
 }
 
 }

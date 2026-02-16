@@ -4,14 +4,25 @@ import { useLocation } from "react-router";
 import { portfolio } from "../../data/projects";
 import styles from "./Project.module.css";
 import arrowIcon from "../../assets/icons/arrow.png";
+import type { Project, Section } from "../../interfaces/allInterfaces";
+import { useEffect, useState } from "react";
 
 function ProjectPage() {
     const { section } = useParams();
     const { project } = useParams();
+	const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
 
-    const currentSection = portfolio.find((item) => item.toParam === section);
-    const currentProject = currentSection?.projects.find(
-        (item) => item.toParam === project
+	useEffect(() => {
+		const mediaQuery = window.matchMedia("(min-width: 768px)");
+		mediaQuery.addEventListener("change", (event) => setIsMobile(!event.matches));
+
+		return () => mediaQuery.removeEventListener("change", (event) => setIsMobile(!event.matches));
+	}, []);
+
+
+    const currentSection:Section|undefined = portfolio.find((item) => item.toParam === section);
+    const currentProject:Project|undefined = currentSection?.projects.find(
+        (item) => item.toParam === project,
     );
 
     const location = useLocation();
@@ -35,44 +46,46 @@ function ProjectPage() {
                 {section}
             </Link>
             <div className={styles.main}>
-                <h2>{currentProject.name}</h2>
+                <h2 className={styles.h2}>{currentProject.name}</h2>
                 <div className={styles.twoBlocks}>
+					 <div className={styles.mediaBlock}>
                     <div className={styles.imageBlock}>
-                        {currentProject.link === "" ? (
-                            <div>
-                                <img
-                                    className={styles.projectImage}
-                                    src={currentProject.img}
-                                    alt={currentProject.alt}
-                                />
-                            </div>
-                        ) : (
-                            <a
-                                href={currentProject.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img
-                                    className={styles.projectImage}
-                                    src={currentProject.img}
-                                    alt={currentProject.alt}
-                                />
-                            </a>
+                        <img
+                            className={styles.projectImage}
+                            src={(!isMobile&&currentProject.desktopImg)?currentProject.desktopImg:currentProject.img}
+                            alt={currentProject.alt}
+                        />
+						 </div>
+                        {currentProject.link && (
+                            <iframe
+							className={styles.projectVideo}
+                                width="560"
+                                height="315"
+                                src={currentProject.link}
+                            ></iframe>
                         )}
                     </div>
                     <div className={styles.texteBlock}>
                         <div className={styles.h3container}>
-                            <h3>Technos</h3>
-                            <p>{currentProject.technos}</p>
+                            <h3>Project Type</h3>
+                            <p>{currentProject.projectType}</p>
+                        </div>
+						<div className={styles.h3container}>
+                            <h3>Role</h3>
+                            <p>{currentProject.role}</p>
+                        </div>
+						<div className={styles.h3container}>
+                            <h3>Place</h3>
+                            <p>{currentProject.place}</p>
                         </div>
                         <div className={styles.h3container}>
-                            <h3>Durée</h3>
-                            <p>{currentProject.duration}</p>
+                            <h3>Starting Date</h3>
+                            <p>{currentProject.starting}</p>
                         </div>
                         <div className={styles.h3container}>
-                            <h3>à propos</h3>
+                            <h3>In a few words...</h3>
                             {currentProject.desc.map((item, index) => (
-                                <p key={index}>{item}</p>
+                               (item.startsWith("http")?<a className={styles.anchor} href={item} target="_blank" key={index}>{item}</a> :<p key={index}>{item}</p>)
                             ))}
                         </div>
                     </div>
