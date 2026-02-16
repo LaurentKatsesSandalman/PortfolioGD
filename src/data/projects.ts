@@ -91,7 +91,7 @@ export const portfolio = [
                 ],
             },
             {
-                name: "Atlantis Fantasy",
+                name: "Atlantis Fantasy (city builder)",
                 toParam: "atlantis",
                 img: projectAtlantis,
 				desktopImg:projectAtlantisDesktop,

@@ -57,7 +57,7 @@ function HomePage() {
                 />
                 <SectionButton
                     image={unreleased}
-                    name="Soft-launched or unreleased Mobile Games"
+                    name="Soft-launched or unreleased"
                     to="portfolio/unreleased"
                     ariaLabel="to soft-launched or unreleased Mobile Games section"
                 />
